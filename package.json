@@ -1,0 +1,17 @@
+{
+    "name": "simple-nodejs-app",
+    "version": "1.0.0",
+    "description": "A simple Node.js app using dotenv for environment variables",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js",
+      "dev": "pm2 startOrRestart ecosystem.config.js --env development",
+      "deploy:dev": "pm2 startOrRestart ecosystem.config.js --env development",
+      "deploy:prod": "pm2 startOrRestart ecosystem.config.js --env production"
+    },
+    "dependencies": {
+      "express": "^4.17.1",
+      "dotenv": "^16.0.0"
+    }
+  }
+  
