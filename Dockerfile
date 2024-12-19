@@ -2,7 +2,7 @@
 FROM node:20 AS build
 
 # Set working directory
-WORKDIR /app
+WORKDIR /var/www/html/
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
@@ -23,7 +23,7 @@ FROM node:18-alpine
 RUN npm install -g pm2
 
 # Set working directory
-WORKDIR /app
+WORKDIR /var/www/html/
 
 # Copy built application and node_modules from the build stage
 COPY --from=build /app /app
