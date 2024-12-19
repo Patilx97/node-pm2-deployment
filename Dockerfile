@@ -26,7 +26,7 @@ RUN npm install -g pm2
 WORKDIR /var/www/html/
 
 # Copy built application and node_modules from the build stage
-COPY --from=build /app /app
+COPY --from=build /var/www/html/ /var/www/html/
 
 # Expose the port the app runs on
 EXPOSE 3000
