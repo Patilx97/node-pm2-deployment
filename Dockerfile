@@ -33,4 +33,5 @@ EXPOSE 3000
 
 # Run the deploy:prod script and start the app with PM2
 # CMD ["pm2-runtime", "startOrRestart", "ecosystem.config.js", "--env", "production"]
+# CMD pm2-runtime startOrRestart ecosystem.config.js --env production
 CMD ["sh", "-c", "pm2-runtime startOrRestart ecosystem.config.js --env production"]
